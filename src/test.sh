@@ -1,7 +1,7 @@
 #!/bin/bash
 
 result=$(node -e "
-const sayHello = require('./app');
+const sayHello = require('./src/app.js');
 console.log(sayHello('Mostafa'));
 ")
 
