@@ -19,4 +19,4 @@ jobs:
     steps:
       - name: Run manual task
         run: |
-          echo "Manual workflow triggered for environment: "
+          echo "Manual workflow triggered for environment: ${{ inputs.environment }}"
