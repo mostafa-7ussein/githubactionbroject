@@ -1,16 +1,16 @@
 name: Scheduled Workflow
 
 on:
-	schedule:
-		- cron: '0 0 * * *' # runs daily at 00:00 UTC
+  schedule:
+    - cron: '0 0 * * *' # runs daily at 00:00 UTC
 jobs:
-	run-schedule:
-		runs-on: ubuntu-latest
-		steps:
-			- name: Checkout
-				uses: actions/checkout@v4
+  run-schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-			- name: Run scheduled task
-				run: |
-					echo "Scheduled workflow running"
-					date
+      - name: Run scheduled task
+        run: |
+          echo "Scheduled workflow running"
+          date
