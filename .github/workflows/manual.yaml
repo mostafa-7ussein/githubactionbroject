@@ -2,10 +2,20 @@ name: Manual Workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - prod
+          - test
 
 jobs:
   manual-job:
     runs-on: ubuntu-latest
     steps:
       - name: Run manual task
-        run: echo "Manual workflow triggered"
+        run: echo "Manual workflow triggered for environment: ${{ github.event.inputs.environment }}"
